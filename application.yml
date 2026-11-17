@@ -1,0 +1,13 @@
+server:
+  port: 2333
+  address: 0.0.0.0
+lavalink:
+  server:
+    password: "youshallnotpass"
+plugins:
+  lavacluster:
+    enabled: true
+    clusters: 4
+    ramPerClusterMb: 512
+    basePort: 2334
+    maxHostRamPercent: 90
