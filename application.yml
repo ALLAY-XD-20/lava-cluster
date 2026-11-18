@@ -9,5 +9,8 @@ plugins:
     enabled: true
     clusters: 4
     ramPerClusterMb: 512
-    basePort: 2334
+    cpuSplit: true           # CPU divided evenly: 4 clusters = 25% each
+    cpuTotalPercent: 100     # 100 = clusters may use all cores
+    maxHeapPercent: 85       # new players skip a cluster above this heap %
+    maxCpuPercent: 90        # new players skip a cluster above this CPU %
     maxHostRamPercent: 90

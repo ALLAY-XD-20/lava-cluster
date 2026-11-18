@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.github.ALLAY-XD-20"
-version = "1.0.1"
+version = "1.0.2"
 
 lavalinkPlugin {
     name = "lava-cluster"
@@ -41,6 +41,8 @@ dependencies {
     compileOnly("org.springframework.boot:spring-boot:3.2.5")
     compileOnly("org.springframework:spring-context:6.1.6")
     compileOnly("org.springframework:spring-web:6.1.6")
+    compileOnly("org.springframework:spring-websocket:6.1.6")
+    compileOnly("jakarta.servlet:jakarta.servlet-api:6.0.0")
     compileOnly("jakarta.annotation:jakarta.annotation-api:2.1.1")
     compileOnly("com.fasterxml.jackson.core:jackson-databind:2.17.2")
     compileOnly("org.slf4j:slf4j-api:2.0.13")

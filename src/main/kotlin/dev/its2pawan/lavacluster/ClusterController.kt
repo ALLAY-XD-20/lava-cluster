@@ -39,9 +39,7 @@ class ClusterController(private val manager: ClusterManager) {
         ResponseEntity.status(HttpStatus.BAD_REQUEST).body(mapOf("error" to e.message))
     }
 
-    /** Least-loaded cluster: connect your bot to this host:port. */
+    /** The one address bots use (the main port). */
     @GetMapping("/best")
-    fun best(): ResponseEntity<Any> =
-        manager.best()?.let { ResponseEntity.ok(it) }
-            ?: ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body(mapOf("error" to "no cluster is running"))
+    fun best(): Map<String, Any> = manager.best()
 }
